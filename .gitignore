@@ -1,2 +1,3 @@
-# floyd warshall algorithm in iterative
-floyd_warshall_iterative.py
+.pyc
+.idea
+.DS_Store
