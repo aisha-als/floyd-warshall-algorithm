@@ -1,8 +1,9 @@
 import sys
 from functools import lru_cache
-from tail_recursion import tail_recursive
 
+# Set NO_PATH value for when there is no path between the start and end nodes.
 NO_PATH = sys.maxsize
+# Sample graph square matrix (nxn).
 graph = [
     [0, 7, NO_PATH, 8],
     [NO_PATH, 0, 5, NO_PATH],
@@ -12,13 +13,15 @@ graph = [
 
 
 def floyd_recursive(distance):
-    """Prints the
+    """Returns the updated graph matrix after calculating the shortest distance.
+
+    Argument:
+    distance - the distance matrix.
     """
     # Find the number of nodes in the graph matrix.
     max_length = len(distance[0])
 
     @lru_cache(maxsize=None)
-    @tail_recursive
     def shortest_distance(i, j, k):
         """Returns the shortest distance between nodes i and j using recursion.
 
@@ -31,21 +34,22 @@ def floyd_recursive(distance):
         if k < 0:
             return distance[i][j]
 
-        #print(i, j, k)
         # Recursive case to find the shortest distance.
         return min(shortest_distance(i, j, k-1),
                    shortest_distance(i, k, k-1) +
                    shortest_distance(k, j, k-1))
 
+    # Loop through the nodes in the graph matrix.
     for k in range(max_length):
         for i in range(max_length):
             for j in range(max_length):
-                #Condition
+                # If the start node and end node are the same
+                # then the distance will be 0.
                 if i == j:
                     distance[i][j] = 0
                     continue
+                # Call the nested function to calculate the shortest distance.
                 distance[i][j] = shortest_distance(i, j, k)
-
     return distance
 
 
