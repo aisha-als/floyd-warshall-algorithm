@@ -1,6 +1,7 @@
 import sys
 import cProfile
 from floydwarshall.floyd_warshall import floyd_recursive
+from floyd_warshall_iterative import floyd
 
 NO_PATH = sys.maxsize
 graph = [
@@ -10,4 +11,7 @@ graph = [
     [NO_PATH, NO_PATH, NO_PATH, 0]
     ]
 
+# Performance test on the recursive version
 cProfile.run("floyd_recursive(graph)")
+# Performance test on the iterative version
+cProfile.run("floyd(graph)")
