@@ -5,6 +5,7 @@ from floydwarshall.floyd_warshall import floyd_recursive
 
 NO_PATH = sys.maxsize
 
+
 class TestDatasets(unittest.TestCase):
 
     def test_original(self):
@@ -20,12 +21,11 @@ class TestDatasets(unittest.TestCase):
         self.assertEqual(floyd_recursive(test_data.test_c), test_data.c_expected)
 
     def test_d(self):
-        self.assertRaises(IndexError, floyd_recursive,test_data.test_d)
+        self.assertRaises(IndexError, floyd_recursive, test_data.test_d)
 
     def test_e(self):
         self.assertEqual(floyd_recursive(test_data.test_e), test_data.e_expected)
 
-#class TestDatasetsResults(unittest.TestResult):
 
 if __name__ == '__main__':
     unittest.main()
