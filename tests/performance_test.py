@@ -10,6 +10,4 @@ graph = [
     [NO_PATH, NO_PATH, NO_PATH, 0]
     ]
 
-
-floyd_recursive(graph)
 cProfile.run("floyd_recursive(graph)")
