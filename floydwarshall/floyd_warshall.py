@@ -21,6 +21,7 @@ def floyd_recursive(distance):
     # Find the number of nodes in the graph matrix.
     max_length = len(distance[0])
 
+    # Caches the results of the function to improve the recursion performance
     @lru_cache(maxsize=None)
     def shortest_distance(i, j, k):
         """Returns the shortest distance between nodes i and j using recursion.
