@@ -16,14 +16,17 @@ This package uses a recursive version of the algorithm, re-written from the iter
 
 This package is written using `Python 3.11.7`
 
+To install this package use pip:
+```sh
+pip install git+https://github.com/aisha-als/floyd-warshall-algorithm.git
+```
+
 To install the dependencies use pip:
 ```sh
 pip install -r requirements.txt
 ```
 
 ## Usage
-
-
 
 ### Performance Tests
 
