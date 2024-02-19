@@ -1,18 +1,40 @@
-# floyd-warshall-algorithm
+# floydwarshall
 
-This is a Python package to use the Floyd Warshall algorithm to calculate the distance matrix in an adjacency matrix.
+This is a Python package to use the Floyd-Warshall algorithm to calculate the distance matrix in an adjacency matrix.
 
 This package uses a recursive version of the algorithm, re-written from the iterative version in the root folder of this package.
 
 
 ## Table of Contents
 
-Any additional information goes here
+- [Install](#Install)
+- [Usage](#Usage)
+- [Contributing](#Contributing)
+- [License](#License)
 
-## Getting Started
+## Install
 
+This package is written using `Python 3.11.7`
+
+To install the dependencies use pip:
+```sh
+$ pip install -r requirements.txt
+```
+
+## Usage
+
+
+
+### Performance Tests
+
+### Unit Tests
 
 ## Contributing
 
+Please open a PR for contributions.
 
 ## License
+
+MIT License.
+
+See license in [LICENSE](floyd-warshall-algorithm/LICENSE)
