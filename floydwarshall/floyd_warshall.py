@@ -1,3 +1,12 @@
+""" Floyd-Warshall Algorithm
+
+This script calculates the shortest distance between nodes in an adjacency matrix using
+Floyd-Warshal algorithm in recursion.
+
+The script accepts data in the form of a graph square matrix in the following format:
+[[0, 7, NO_PATH, 8],[NO_PATH, 0, 5, NO_PATH]]
+"""
+
 import sys
 from functools import lru_cache
 
@@ -21,7 +30,7 @@ def floyd_recursive(distance):
     # Find the number of nodes in the graph matrix.
     max_length = len(distance[0])
 
-    # Caches the results of the function to improve the recursion performance
+    # Caches the results of the function to improve the recursion performance.
     @lru_cache(maxsize=None)
     def shortest_distance(i, j, k):
         """Returns the shortest distance between nodes i and j using recursion.

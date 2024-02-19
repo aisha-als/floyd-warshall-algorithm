@@ -1,4 +1,5 @@
 import sys
+
 # Test data to be used in the /tests directory
 
 NO_PATH = sys.maxsize
@@ -9,14 +10,14 @@ original_graph = [
     [NO_PATH, 0, 5, NO_PATH],
     [NO_PATH, NO_PATH, 0, 2],
     [NO_PATH, NO_PATH, NO_PATH, 0]
-    ]
+]
 
 original_expected = [
     [0, 7, 12, 8],
     [NO_PATH, 0, 5, 7],
     [NO_PATH, NO_PATH, 0, 2],
     [NO_PATH, NO_PATH, NO_PATH, 0]
-    ]
+]
 
 # Test cases
 # test_a - 5x5 adjacency matrix
@@ -26,7 +27,7 @@ test_a = [
     [NO_PATH, 5, 0, 2, 4],
     [2, 6, 4, 0, 7],
     [3, 1, NO_PATH, 5, 0]
-    ]
+]
 
 a_expected = [
     [0, 4, 2, 4, 6],
@@ -34,7 +35,7 @@ a_expected = [
     [4, 5, 0, 2, 4],
     [2, 6, 4, 0, 7],
     [2, 1, 4, 5, 0]
-    ]
+]
 
 # test_b - 8x8 adjacency matrix
 test_b = [
@@ -46,7 +47,7 @@ test_b = [
     [5, 7, NO_PATH, 4, 2, 0, 1, 5],
     [1, NO_PATH, 8, NO_PATH, 3, 4, 0, 6],
     [6, NO_PATH, 2, 1, NO_PATH, 7, 1, 0]
-    ]
+]
 
 b_expected = [
     [0, 4, 2, 1, 3, 3, 4, 4],
@@ -57,7 +58,7 @@ b_expected = [
     [2, 3, 4, 3, 2, 0, 1, 5],
     [1, 4, 3, 2, 3, 4, 0, 5],
     [2, 5, 2, 1, 4, 3, 1, 0]
-    ]
+]
 
 # test_c - float values
 test_c = [
@@ -66,7 +67,7 @@ test_c = [
     [NO_PATH, 5.77, 0, 2, 4],
     [2, 6.12, 4, 0, 7],
     [3, 1.1, NO_PATH, 5, 0]
-    ]
+]
 
 c_expected = [
     [0, 4.2, 2, 4, 6],
@@ -103,7 +104,7 @@ test_e = [
     [4, 7, NO_PATH, 4, 2, NO_PATH, 1, 5, 1, 2, 1, 2, 4, 0, 6, 3],
     [1, NO_PATH, 5, NO_PATH, 3, 4, NO_PATH, 3, 3, 1, 5, 7, 2, 4, 0, 7],
     [6, NO_PATH, 2, 2, NO_PATH, 3, 1, NO_PATH, 5, 7, 2, NO_PATH, NO_PATH, 3, 5, 0]
-    ]
+]
 
 e_expected = [
     [0, 4, 2, 1, 3, 3, 4, 4, 2, 2, 3, 1, 4, 5, 3, 3],

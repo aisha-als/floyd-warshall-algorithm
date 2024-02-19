@@ -7,8 +7,10 @@ NO_PATH = sys.maxsize
 
 
 class TestDatasets(unittest.TestCase):
+    """Running unit tests. """
 
     def test_original(self):
+        """Tests the original graph matrix. """
         self.assertEqual(floyd_recursive(test_data.original_graph), test_data.original_expected)
 
     def test_a(self):
