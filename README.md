@@ -4,6 +4,7 @@ This is a Python package to use the Floyd-Warshall algorithm to calculate the di
 
 This package uses a recursive version of the algorithm, re-written from the iterative version in the root folder of this package.
 
+This package is written using PEP 8 guidelines.
 
 ## Table of Contents
 
@@ -14,7 +15,7 @@ This package uses a recursive version of the algorithm, re-written from the iter
 
 ## Install
 
-This package is written using `Python 3.11.7`
+This package is written using `Python 3.11.7`.
 
 To install this package use pip:
 ```sh
@@ -30,12 +31,18 @@ pip install -r requirements.txt
 
 ### Performance Tests
 
+Performance tests are run using `cProfile`. 
+
+To run the performance tests, run the below command:
 ```sh
 python tests/performance_test.py
 ```
 
 ### Unit Tests
 
+Unit tests are run using `unittest`. 
+
+To run the unit tests, run the below command:
 ```sh
 python -m unittest
 ```
