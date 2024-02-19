@@ -7,11 +7,11 @@
 │   │   └── floyd_warshall.py
 │   └── tests/
 │       ├── __init__.py
+│       ├── data_tests.py
+│       ├── floyd_warshall_iterative.py
 │       ├── performance_test.py
-│       ├── test_data.py
-│       └── unit_test.py
+│       └── test_unit.py
 ├── .gitignore
-├── floyd_warshall_iterative.py
 ├── LICENSE
 ├── README.md
 ├── requirements.txt
