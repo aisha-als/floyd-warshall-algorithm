@@ -65,4 +65,5 @@ def floyd_recursive(distance):
 
 if __name__ == '__main__':
     # Call the function and pass the graph matrix.
-    print(floyd_recursive(graph))
+    updated_matrix = floyd_recursive(graph)
+    print(updated_matrix)
