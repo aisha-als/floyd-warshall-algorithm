@@ -18,7 +18,7 @@ This package is written using `Python 3.11.7`
 
 To install the dependencies use pip:
 ```sh
-$ pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Usage
@@ -27,7 +27,15 @@ $ pip install -r requirements.txt
 
 ### Performance Tests
 
+```sh
+python tests/performance_test.py
+```
+
 ### Unit Tests
+
+```sh
+python -m unittest
+```
 
 ## Contributing
 

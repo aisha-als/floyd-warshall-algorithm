@@ -7,7 +7,7 @@ graph = [
     [NO_PATH, 0, 5, NO_PATH],
     [NO_PATH, NO_PATH, 0, 2],
     [NO_PATH, NO_PATH, NO_PATH, 0]
-]
+    ]
 
 MAX_LENGTH = len(graph[0])
 
@@ -21,16 +21,18 @@ def floyd(distance):
                 (range(MAX_LENGTH), range(MAX_LENGTH), range(MAX_LENGTH)):
 
         # Assume that if start_node and end_node are the same
-        # then the distance would be zero
+        # then the distance would be zero.
         if start_node == end_node:
             distance[start_node][end_node] = 0
             continue
 
-        # Return all possible paths and find the minimum
+        # Return all possible paths and find the minimum.
         distance[start_node][end_node] = min(distance[start_node][end_node],
                                              distance[start_node][intermediate] + distance[intermediate][end_node])
-    # Any value that have sys.maxsize has no path
+    # Any value that has sys.maxsize has no path.
     print(distance)
 
 
-floyd(graph)
+if __name__ == '__main__':
+    # Call the function and pass the graph matrix.
+    floyd(graph)
