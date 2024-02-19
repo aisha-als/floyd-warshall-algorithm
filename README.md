@@ -29,6 +29,20 @@ pip install -r requirements.txt
 
 ## Usage
 
+To use this package, you could import it into your script:
+```sh
+from floydwarshall.floyd_warshall import floyd_recursive
+```
+
+Alternatively, you could run it from your IDE or CLI as below (from the repository's root directory):
+```sh
+python floydwarshall/floyd_warshall.py
+```
+
+The script accepts data in the form of a graph square matrix in the following format:
+
+`graph = [[0, 7, NO_PATH, 8],[NO_PATH, 0, 5, NO_PATH],[NO_PATH, NO_PATH, 0, 2],[NO_PATH, NO_PATH, NO_PATH, 0]]`
+
 ### Performance Tests
 
 Performance tests are run using `cProfile`. 
