@@ -12,6 +12,8 @@ graph = [
     ]
 
 # Performance test on the recursive version
+print("cProfile results of the recursive version: ")
 cProfile.run("floyd_recursive(graph)")
 # Performance test on the iterative version
+print("cProfile results of the iterative version: ")
 cProfile.run("floyd(graph)")

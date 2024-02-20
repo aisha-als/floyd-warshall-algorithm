@@ -1,3 +1,7 @@
+# This script shows the iterative version of the Floyd-Warshall algorithm.
+# It has been placed in the tests/ folder to compare the
+# performance with the recursive version.
+
 import sys
 import itertools
 
@@ -14,11 +18,11 @@ MAX_LENGTH = len(graph[0])
 
 def floyd(distance):
     """
-    A simple implementation of Floyd's algorithm
+    A simple implementation of Floyd's algorithm.
     """
     for intermediate, start_node, end_node \
             in itertools.product \
-                (range(MAX_LENGTH), range(MAX_LENGTH), range(MAX_LENGTH)):
+            (range(MAX_LENGTH), range(MAX_LENGTH), range(MAX_LENGTH)):
 
         # Assume that if start_node and end_node are the same
         # then the distance would be zero.
@@ -28,7 +32,7 @@ def floyd(distance):
 
         # Return all possible paths and find the minimum.
         distance[start_node][end_node] = min(distance[start_node][end_node],
-                                             distance[start_node][intermediate] + distance[intermediate][end_node])
+                            distance[start_node][intermediate] + distance[intermediate][end_node])
     # Any value that has sys.maxsize has no path.
     print(distance)
 
