@@ -43,6 +43,12 @@ The script accepts data in the form of a graph square matrix in the following fo
 
 `graph = [[0, 7, NO_PATH, 8],[NO_PATH, 0, 5, NO_PATH],[NO_PATH, NO_PATH, 0, 2],[NO_PATH, NO_PATH, NO_PATH, 0]]`
 
+Where there is no path between nodes or it is unknown, this is set as below:
+```sh
+import sys
+NO_PATH = sys.maxsize
+```
+
 ### Performance Tests
 
 Performance tests are run using `cProfile`. 
