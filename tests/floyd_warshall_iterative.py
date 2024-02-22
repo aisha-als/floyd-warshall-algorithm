@@ -34,9 +34,10 @@ def floyd(distance):
         distance[start_node][end_node] = min(distance[start_node][end_node],
                             distance[start_node][intermediate] + distance[intermediate][end_node])
     # Any value that has sys.maxsize has no path.
-    print(distance)
+    return distance
 
 
 if __name__ == '__main__':
     # Call the function and pass the graph matrix.
-    floyd(graph)
+    updated_matrix = floyd(graph)
+    print(updated_matrix)
